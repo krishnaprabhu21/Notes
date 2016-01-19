@@ -1,6 +1,24 @@
-<% @notes.each do |note| %>
-	<h1><%= link_to note.title, note %></h1>
-	<p><%= time_ago_in_words(note.created_at) %></p>
-<% end %>
 
-<%= link_to 'Add New Note', new_note_path %>
+<div class="container">	
+	<div class="row notes_container">
+		<% unless @notes.blank? %>
+			<% @notes.each do |note| %>
+				<%= link_to(@note) do %>
+					<div class="col-lg-2 notes">
+						<h4><%= link_to note.title.upcase, note %></h4>
+						<p><%= time_ago_in_words(note.created_at) %></p>
+					</div>
+				<% end %>
+			<% end %>
+		<% end %>
+	</div>
+	
+	<br>
+	<br>
+	<br>
+
+	<div class="row">
+		<%= link_to 'Add New Note', new_note_path %>
+	</div>
+
+</div>

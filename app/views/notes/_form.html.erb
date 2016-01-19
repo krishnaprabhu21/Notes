@@ -1,17 +1,14 @@
 
 <%= simple_form_for @note do |f| %>
-      <div class="form-group">
-        <%= f.label :title, input_html: { class: 'form-control' } %>
-        <div class="col-md-8">
-          <%= f.text_field :title, class: "form-control" %>
-        </div>
-      </div>
-      <div class="form-group">
-        <%= f.label :content, class: "col-md-4 control-label" %>
-        <div class="col-md-8">
-          <%= f.text_field :content, class: "form-control" %>
-        </div>
-      </div>
+
+  <div class="form-group notes_container">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :content %>
+      <%= f.text_field :content, class: "form-control" %>
+  </div>
 
       <%= f.submit "Submit", class: "btn btn-default btn-primary" %>  
  <% end %>

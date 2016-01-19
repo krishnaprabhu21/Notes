@@ -1,3 +1,73 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navbar.navbar-inverse {
+    margin-bottom: 0px !important;
+    border-radius: 0px;
+    border-bottom: 5px solid #608BB9;
+
+    .navbar-brand {
+    	color: #fff;
+    }	
+
+    .navbar-nav>li>a {
+    	color: #fff;
+    	font-weight: 700;
+    }
+}
+
+.jumbotron {
+	text-align: center;
+}
+
+.notes_container {
+	margin-top: 70px;
+}
+
+.notes {
+    margin-right: 20px;
+    margin-bottom: 30px;	
+	padding: 10px 20px;
+	/*border: 2px solid red;*/
+	border-radius: 5px;
+	height: 140px;
+	background: #292929;
+
+	h4 {
+		margin-top: 0px !important;
+
+		a {
+			color: #fff;
+
+			&:hover {
+				text-decoration: none;
+			};
+		}		
+	}
+
+	p {
+	    position: absolute;
+	    bottom: 0px;
+	    color: #608BB9;
+	}
+}
+
+
+.notice {
+    position: absolute !important;
+    padding: 10px 0px;
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+    background: rgba(98, 184, 92, 0.55);
+}
+
+.alert {
+    position: absolute !important;
+    padding: 10px 0px;
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+    background: rgba(255, 0, 0, 0.72);
+}
